@@ -228,5 +228,8 @@
     .pict{
         width: 100%;
     }
+    .my-contact{
+        flex-direction: column-reverse!important;
+    }
     
 }
