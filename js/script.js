@@ -1,14 +1,12 @@
 var d = new Date();
 var n = d.getFullYear();
 document.getElementById('date').innerHTML = n.toString();
+$('.d-block').attr('href', '#imgToggle');
+$('.d-block').attr('data-bs-toggle', 'modal');
 $('.d-block').on('click', function () {
-   $('#full-img-prev').removeClass('hide');
-   $('#full-img-prev').addClass('show');
-   $('#img-show').html(`<img src="`+$(this).attr('src')+`" class="d-block mx-auto img-prev" style="width: 85%; height: 85%;" alt="...">`);
-});
-$('#close-prev').on('click', function () {
-    $('#full-img-prev').removeClass('show');
-    $('#full-img-prev').addClass('hide');
+   $('#modal-body').html(`<img src="`+$(this).attr('src')+`" class="d-block mx-auto img-prev" style="max-width: 85%; max-height: 85%;" alt="...">`);
+   thisParent = $(this).parent();
+   $('#desc').html(thisParent.find('.d-inline').html()); 
 });
 $('.nav-link').on('click', function (e) { 
     e.preventDefault();

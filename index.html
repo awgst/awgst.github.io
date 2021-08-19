@@ -18,13 +18,27 @@
     <title>Portofolio</title>
   </head>
   <body class="d-flex flex-column full-height">
-    <div class="full-img-prev hide" id="full-img-prev">
-      <div class="d-flex justify-content-end">
-        <a class="btn mt-3" id="close-prev"><i class="bi bi-x-circle text-light fs-3 me-4"></i></a>
-      </div>
-      <div class="container-fluid d-flex mt-2" id="img-show">
-        
-      </div>
+    <div class="modal fade" id="imgToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content modal-bg">
+            <div class="modal-header border-0">
+              <h5 class="modal-title" id="registerModalLabel"></h5>
+              <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-circle text-light fw-bold fs-3"></i></button>
+            </div>
+            <div class="modal-body pt-0">
+              <div class="row d-flex flex-column">
+                    <div class="col" id="modal-body">
+                        
+                    </div>
+              </div>
+            </div>
+            <div class="modal-footer border-0">
+                <div class="d-flex justify-content-center w-100">
+                    <p class="mt-0 d-inline text-light fw-bold p-3" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.75);" id="desc"></p>
+                </div>
+            </div>
+          </div>
+        </div>
     </div>
     <div class="header">
         <!-- Navbar -->
@@ -81,9 +95,9 @@
                 <div class="card mx-3 rounded-pill border-0 custom-top-shadow custom-h-20" style="margin-top: -10px;"></div>
                 <div class="d-flex mx-3 justify-content-center align-items-center about">
                     <div class="photo">
-                        <img src="images/second.png" alt="">
+                        <img src="images/second.png" alt="" class="img-fluid">
                     </div>
-                    <div class="d-flex flex-column" style="width: clamp(280px, 450px, 450px);">
+                    <div class="d-flex flex-column about-me" style="width: clamp(280px, 450px, 450px);">
                         <h2 class="heading-section">About Me</h2>
                         <span class="line"></span>
                         <p>A freshgraduate of Informatic UPN "Veteran" Yogyakarta who focused on web development. Experienced with PHP, Python, HTML, CSS, Javascript, Bootstrap, MySQL, SQLite, PostgreSQL also framework such as Laravel and Django. </p>
@@ -117,7 +131,7 @@
                         </div>
                         <div class="carousel-inner w-100 h-100">
                           <div class="carousel-item active h-100">
-                            <img src="images/project/momen/momen-1.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
+                            <img src="images/project/momen/momen-1.PNG" class="d-block w-100 h-100 border-radius-10" alt="..." href="#imgToggle" data-bs-toggle="modal">
                             <div class="carousel-caption d-none d-md-block">
                               <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Web app for blogging.</p>
                             </div>
