@@ -47,7 +47,3 @@ $(window).scroll(function () {
         }
     });
 });
-window.onload = function (){
-    var offset = $('#home').offset().top;
-    $('html').animate({scrollTop:offset}, 100, 'swing');
-}
