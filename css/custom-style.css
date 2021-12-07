@@ -111,6 +111,12 @@
 .full-img-prev.hide{
     display: none;
 }
+.jobs{
+    height: 174px;
+}
+.jobs .btn{
+    height: 100%;
+}
 .line{
     width: 80px;
 	height: 2px;
