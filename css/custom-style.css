@@ -1,0 +1,241 @@
+/* 
+    Blue : #90acce;
+    Light : #efeff2;
+*/
+@font-face {
+    font-family: 'aAntaraDistance';
+    src: url('fonts/a-antara-distance-font/AAntaraDistance-EaJlj.otf'), url('fonts/a-antara-distance-font/AAntaraDistance-OVA2e.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.antara-font{
+    font-size: 45px;
+	font-family: aAntaraDistance;
+	transform: rotate(-5deg);
+    font-weight: 600;
+}
+.border-radius-10{
+    border-radius: 10px;
+}
+.btn-custom{
+    background-color: #e45451;
+    color: #efeff2;
+}
+.btn-custom2{
+    background-color: #efeff2;
+    color: black;
+}
+.btn-custom:hover{
+    background-color: #efeff2;
+    color: #e45451;
+    border: 1px solid #e45451;
+}
+.btn-custom2:hover{
+    background-color: #e45451;
+    color: #efeff2;
+    border: 1px solid #efeff2;
+}
+.btn-job{
+    background-color: #fff;
+}
+.btn-job:hover{
+    background-color: #90acd1;
+    color: #fff;
+}
+.btn-job:hover h3, .btn-job:hover p{
+    color: #ffff;
+}
+.btn-pict:hover{
+    transform: scale(1.05);
+}
+.custom-bg-blue{
+    background-color: #90acce;
+}
+.custom-bg-light{
+    background-color: #efeff2;
+}
+.custom-bg-light-red{
+    background-color: #e45451;
+}
+.custom-bot-shadow-1{
+    box-shadow: 0px 5px 5px rgba(10,10,10, 10%);
+}
+.custom-bot-shadow-2{
+    box-shadow: 0px 5px 5px rgba(10,10,10, 30%);
+}
+.custom-color-dark-grey{
+    color: #222;
+}
+.custom-color-light-grey{
+    color: #779;
+    font-weight: 100;
+}
+.custom-color-light-grey-2{
+    color: #777777;
+}
+.custom-color-light-red{
+    color: #e45451;
+}
+.custom-h-20{
+    height: 20px;
+}
+.custom-top-shadow{
+    box-shadow: -1px -5px 5px rgb(10 10 10 / 10%);
+}
+.first-images{
+    margin-top: 0.1px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.fixed-height{
+    min-height: 550px;
+}
+.fs-xl{
+    font-size: 57px;
+}
+.full-height{
+    min-height: 97vh;
+}
+.full-img-prev.show{
+    position: fixed; 
+    width: 100%; 
+    height: 100%; 
+    z-index: 9999; 
+    background-color: rgba(0, 0, 0, 0.541); 
+    left: 0px; 
+    top: 0px;
+}
+.full-img-prev.hide{
+    display: none;
+}
+.jobs{
+    height: 174px;
+}
+.jobs .btn{
+    height: 100%;
+}
+.line{
+    width: 80px;
+	height: 2px;
+	background-color: #e45451;
+	display: block;
+	margin-bottom: 30px;
+}
+.modal-bg{
+    background-color: rgb(0, 0, 0, 0);
+    color: white;
+    border: none;
+}
+.modal-dialog{
+    max-width: 1080px;
+}
+.ms-6{
+    margin-left: 4rem!important;
+}
+.mt-6{
+    margin-top: 4rem!important;
+}
+.nav-link{
+    color: #484848 !important;
+    font-weight: 400;
+    font-size: 18px !important;
+}
+.no-style{
+    text-decoration: none;
+    color: black;
+}
+.p-11{
+    padding: 9rem!important;
+}
+.photo{
+	width: clamp(296px,  376px, 383px);
+	height: 550px;
+	margin-right: 120px;
+}
+.photo-first{
+    width: 400px;
+	height: 550px;
+    position: relative;
+    margin-right: -130px;
+}
+.photo img{
+    margin-top: 91.3px;
+    width: 100%;
+    height: 87%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+    position: relative;
+}
+
+.pict{
+    width: 32%;
+    height: 250px;
+    border: 1px solid;
+    text-align: center;
+    margin: 5px 5px;
+    border-radius: 10px;
+}
+.rounded-15{
+    border-radius: 15px;
+}
+@media screen and (max-width: 1054px) {
+    .jobs{
+        width: 100%!important;
+    }
+    .pict{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 711px) {
+    .photo-first{
+        display: none;
+        margin-right: 0;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .about-me{
+        max-width: 100%;
+    }
+    .about .photo{
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        max-width: 100%;
+    }
+    .about .photo img{
+        margin: auto;
+        margin-bottom: 20px;
+        border-radius: 50%;
+        height: 67%;
+        border: 3px solid rgba(122, 122, 122, 0.705);
+    }
+    .heading-section{
+        text-align: center!important;
+    }
+    .btn-custom{
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+    .jobs{
+        width: 100%!important;
+    }
+    .line{
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
+    .p-11{
+        padding: 3rem!important;
+    }
+    .pict{
+        width: 100%;
+    }
+    .my-contact{
+        flex-direction: column-reverse!important;
+    }
+    
+}
