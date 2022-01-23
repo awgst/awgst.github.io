@@ -1,28 +1,416 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awang Suria Trisakti</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-		canvas{
-            background-color: pink; 
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-		}
-    </style>
-</head>
-<body>
-    <canvas></canvas>
-    <script type="module" src="./assets/js/index.js"></script>
-</body>
+<!doctype html>
+<html lang="en" class="contentnya" id="home">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="css/custom-style.css">
+    <title>Portofolio</title>
+  </head>
+  <body class="d-flex flex-column full-height">
+    <div class="modal fade" id="imgToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content modal-bg">
+            <div class="modal-header border-0">
+              <h5 class="modal-title" id="registerModalLabel"></h5>
+              <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-circle text-light fw-bold fs-3"></i></button>
+            </div>
+            <div class="modal-body pt-0">
+              <div class="row d-flex flex-column">
+                    <div class="col" id="modal-body">
+                        
+                    </div>
+              </div>
+            </div>
+            <div class="modal-footer border-0">
+                <div class="d-flex justify-content-center w-100">
+                    <p class="mt-0 d-inline text-light fw-bold p-3" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.75);" id="desc"></p>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="header">
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light px-5 py-0 custom-bot-shadow-2">
+            <div class="container-fluid">
+              <a class="navbar-brand antara-font" href="#home">Portofolio</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item mx-3">
+                    <a class="nav-link" href="#about">About</a>
+                  </li>
+                  <li class="nav-item mx-3">
+                    <a class="nav-link" href="#work">Works</a>
+                  </li>
+                  <li class="nav-item mx-3">
+                    <a class="nav-link" href="#contact" id="contact-link">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <!-- End of Navbar -->
+    </div>
+    <div class="main flex-xxl-grow-1 container-fluid mx-0 px-0 mt-6">
+        <!-- Landing -->
+        <div class="row fixed-height me-0">
+            <div class="col-10 mx-0 custom-bg-light d-flex container-fluid">
+                <div class="my-auto ms-6">
+                    <h2 class="custom-color-light-grey fs-3">Hi, I'm</h2>
+                    <h1 class="custom-color-dark-grey fs-xl">Awang Suria Trisakti</h1>
+                    <h3 class="custom-color-light-grey fs-5">A young <span class="custom-color-light-red">web developer</span> with high passionate in programming.</h3>
+                    <h3 class="custom-color-light-grey fw-bold fs-5">Find Me</h3>
+                    <div class="find-me fs-3">
+                        <a target="blank" href="https://www.instagram.com/awang.t/" class="custom-color-light-grey"><i class="fa fa-instagram"></i></a>
+                        <a target="blank" href="https://www.linkedin.com/in/awang-suria-trisakti-793336156/" class="custom-color-light-grey"><i class="fa fa-linkedin-square"></i></a>
+                        <a target="blank" href="https://github.com/awgst" class="custom-color-light-grey"><i class="fa fa-github-square"></i></a>
+                    </div>
+                </div>
+                <div class="photo-first ms-auto">
+                    <img class="first-images" src="images/first_v2.png" alt="">
+                </div>
+            </div>
+            <div class="col-2 mx-0 custom-bg-blue">
+                
+            </div>
+        </div>
+        <!-- End of Landing -->
+        <!-- About -->
+        <div class="container-fluid h-auto contentnya" id="about">
+            <div class="d-flex flex-column">
+                <div class="card mx-3 rounded-pill border-0 custom-top-shadow custom-h-20" style="margin-top: -10px;"></div>
+                <div class="d-flex mx-3 justify-content-center align-items-center about">
+                    <div class="photo">
+                        <img src="images/second.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="d-flex flex-column about-me" style="width: clamp(280px, 450px, 450px);">
+                        <h2 class="heading-section">About Me</h2>
+                        <span class="line"></span>
+                        <p>A freshgraduate of Informatic UPN "Veteran" Yogyakarta who focused on web development. Experienced with PHP, Python, HTML, CSS, Javascript, Bootstrap, MySQL, SQLite, PostgreSQL also framework such as Laravel and Django. </p>
+                        <p>Enthusiast and reliable person, hardworking to deliver the best result as well as possible.</p>
+                        <div class="container-fluid d-flex">
+                          <a href="https://drive.google.com/file/d/1O0i6aHSgyEkLhsL4mBJ2krKa-4WpoCtT/view?usp=drivesdk" class="btn btn-custom rounded-15 p-3 fw-bold me-auto">Download CV</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mx-3 rounded-pill border-0 custom-bot-shadow-1 custom-h-20"  style="margin-bottom: -10px; z-index: 1; position: relative;"></div>
+            </div>
+        </div>
+        <!-- End of About -->
+        <!-- Latest Works -->
+        <div class="container-fluid custom-bg-light contentnya" id="work">
+            <div class="d-flex flex-column p-11">
+                <h1  class="heading-section">Latest Works</h1>
+                <span class="line"></span>
+                <div class="row row-cols-3">
+                    <!-- <div class="col pict btn btn-pict mb-3 p-0">
+                      
+                    </div>  -->
+                    <div class="col pict btn btn-pict mb-3 p-0">
+                      <div id="carouselExampleDark-2" class="carousel carousel-fade carousel-dark slide h-100 w-100" data-bs-interval="false">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleDark-2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleDark-2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleDark-2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          <button type="button" data-bs-target="#carouselExampleDark-2" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                          <button type="button" data-bs-target="#carouselExampleDark-2" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        </div>
+                        <div class="carousel-inner w-100 h-100">
+                          <div class="carousel-item active h-100">
+                            <img src="images/project/momen/momen-1.PNG" class="d-block w-100 h-100 border-radius-10" alt="..." href="#imgToggle" data-bs-toggle="modal">
+                            <div class="carousel-caption d-none d-md-block">
+                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Web app for blogging.</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/project/momen/momen-2.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Built using Laravel framework.</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/project/momen/momen-3.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">This is my open source project</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/project/momen/momen-4.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Check it out on github.com/awgst/momen</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/project/momen/momen-5.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Let's collab</p>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark-2" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark-2" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div> 
+                    <div class="col pict btn btn-pict mb-3 p-0">
+                      <div id="carouselExampleDark-3" class="carousel carousel-fade carousel-dark slide h-100 w-100" data-bs-interval="false">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleDark-3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleDark-3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleDark-3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner w-100 h-100">
+                          <div class="carousel-item active h-100">
+                            <img src="images/project/unclickbaited/unclickbaited-1.png" class="d-block w-100 h-100 border-radius-10" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Web app for clickbait Indonesian clickbait detector using machine learning.</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/project/unclickbaited/unclickbaited-2.png" class="d-block w-100 h-100 border-radius-10" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Built using Python and Django framework.</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/project/unclickbaited/unclickbaited-3.png" class="d-block w-100 h-100 border-radius-10" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Machine learning using SVM-PSO built with Python.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark-3" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark-3" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div> 
+                    <div class="col pict btn btn-pict mb-3 p-0">
+                      <div id="carouselExampleDark-4" class="carousel carousel-fade carousel-dark slide h-100 w-100" data-bs-interval="false">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleDark-4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleDark-4" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleDark-4" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          <button type="button" data-bs-target="#carouselExampleDark-4" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                          <button type="button" data-bs-target="#carouselExampleDark-4" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        </div>
+                        <div class="carousel-inner w-100 h-100">
+                          <div class="carousel-item active h-100">
+                            <img src="images/project/ppdb/ppdb-2.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">A website for admission selection for new junior high school students of SMP N 1 Gabus.</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/project/ppdb/ppdb-3.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">This is remake of my original project built using PHP Laravel.</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/project/ppdb/ppdb-4.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Built with pdf reporting using FPDF from github.com/crabbly/fpdf-laravel.</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/project/ppdb/ppdb-5.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);"></p>
+                            </div>
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/project/ppdb/ppdb-7.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Implement multi-level users using middleware for admin and super-admin.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark-4" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark-4" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div> 
+                    <div class="col pict btn btn-pict mb-3 p-0">
+                      <div id="carouselExampleDark-5" class="carousel carousel-fade carousel-dark slide h-100 w-100" data-bs-interval="false">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleDark-5" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleDark-5" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleDark-5" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          <button type="button" data-bs-target="#carouselExampleDark-5" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                          <button type="button" data-bs-target="#carouselExampleDark-5" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        </div>
+                        <div class="carousel-inner w-100 h-100">
+                          <div class="carousel-item active h-100">
+                            <img src="images/project/museum/sandi-1.png" class="d-block w-100 h-100 border-radius-10" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Local landing pages for records visitors data, built using php native.</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/project/museum/sandi-2.png" class="d-block w-100 h-100 border-radius-10" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Developed for student internship projects at museum sandi 2019.</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/project/museum/sandi-3.png" class="d-block w-100 h-100 border-radius-10" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Implement CRUD with MySQL.</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/project/museum/sandi-4.png" class="d-block w-100 h-100 border-radius-10" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Show statistic from accumulative visitors.</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/project/museum/sandi-5.png" class="d-block w-100 h-100 border-radius-10" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Can be managed by admin of museum.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark-5" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark-5" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div> 
+                    <div class="col pict btn btn-pict mb-3 p-0">
+                      <div id="carouselExampleDark-6" class="carousel carousel-fade carousel-dark slide h-100 w-100" data-bs-interval="false">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleDark-6" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleDark-6" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleDark-6" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          <button type="button" data-bs-target="#carouselExampleDark-6" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                          <button type="button" data-bs-target="#carouselExampleDark-6" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        </div>
+                        <div class="carousel-inner w-100 h-100">
+                          <div class="carousel-item active h-100">
+                            <img src="images/project/Chat/chat-1.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">A web chat app for crypto final assignment built using native php.</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/project/Chat/chat-2.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Using md5 encryption for register and user sign in.</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/project/Chat/chatt-3.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Implementing ajax</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/project/Chat/chat-4.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Using md5 for encrypt users password</p>
+                            </div>
+                          </div>
+                          <div class="carousel-item h-100">
+                            <img src="images/project/Chat/chat-5.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Using rc4 for encrypt users messages</p>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark-6" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark-6" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <!-- End of Latest Works -->
+        <!-- Job History -->
+        <div class="container-fluid">
+          <div class="d-flex flex-column p-11">
+            <h1  class="heading-section">Job History</h1>
+            <span class="line"></span>
+            <div class="row row-cols-2">
+              <div class="col jobs">
+                <div class="no-style btn btn-job text-start rounded-15 p-3">
+                  <h2>SMP Negeri 1 Gabus</h2>
+                  <h3 class="custom-color-light-grey fs-5">Freelance | Mar 2020 - Apr 2020</h3>
+                  <p class="custom-color-light-grey-2">Responsible to develop a web app for admission selection for new junior high school students of SMP N 1 Gabus.</p>
+                </div>
+              </div>
+              <div class="col jobs">
+                <div href="" class="no-style btn btn-job text-start rounded-15 p-3">
+                  <h2>Museum Sandi Yogyakarta</h2>
+                  <h3 class="custom-color-light-grey fs-5">Internship | Jan 2019 - Feb 2019</h3>
+                  <p class="custom-color-light-grey-2">Responsible to develop a local landing pages for recording museum visitors data.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of Job History -->
+        <!-- Contact -->
+        <div class="d-flex flex-column container-fluid custom-bg-light-red px-0 mx-0 text-light contentnya" id="contact">
+            <div class="m-auto text-center py-5 my-5">
+                <h1>Contact Me</h1>
+                <span></span>
+                <p>If you have any question or if do you need more information please contact me at</p>
+                <div class="d-flex justify-content-center my-contact">
+                    <h3 class="fs-6 me-3">+62 8253 2523 6332</h3>
+                    <h3 class="fs-6 ms-3">trisaktiawang@gmail.com</h3>
+                </div>
+                <a href="mailto:trisaktiawang@gmail.com" class="btn btn-custom2 rounded-pill px-5 py-3 mt-3 fw-bold">Hire Me</a>
+            </div>
+        </div>
+		  <!-- End of Contact -->
+    </div>
+    <div class="footer mx-auto">
+        <span class="text-muted">Copyright &copy; <span id="date"></span></span>
+    </div>
+
+    <!-- JavaScript Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Custom Script -->
+    <script src="js/script.js"></script>
+  </body>
 </html>
