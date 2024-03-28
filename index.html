@@ -1,462 +1,359 @@
-<!doctype html>
-<html lang="en" class="contentnya" id="home">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Awang Suria Trisakti Backend Engineer Portfolio">
+    <title>Awang Suria Trisakti</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap + Meyawo main styles -->
+	<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/imgs/icon.png" type="image/x-icon">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <!-- jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <!-- Custom Style -->
-    <link rel="stylesheet" href="css/custom-style.css?v=2">
-    <link rel = "icon" href ="images/g833.png" type = "image/x-icon">
-    <title>Portfolio | Awang Suria Trisakti</title>
-  </head>
-  <body class="d-flex flex-column full-height">
-    <div class="modal fade" id="imgToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content modal-bg">
-            <div class="modal-header border-0">
-              <h5 class="modal-title" id="registerModalLabel"></h5>
-              <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-circle text-light fw-bold fs-3"></i></button>
-            </div>
-            <div class="modal-body pt-0">
-              <div class="row d-flex flex-column">
-                    <div class="col" id="modal-body">
-                        
-                    </div>
-              </div>
-            </div>
-            <div class="modal-footer border-0">
-                <div class="d-flex justify-content-center w-100">
-                    <p class="mt-0 d-inline text-light fw-bold p-3" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.75);" id="desc"></p>
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="#">awgst</a>         
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" href="#home">Home</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#about">About</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#portfolio">Project</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#jobs">Job History</a>
+                </li>
+                <!-- <li class="item">
+                    <a class="link" href="#tech">Tech</a>
+                </li> -->
+                <li class="item">
+                    <a class="link" href="#contact">Contact</a>
+                </li>
+                <li class="item ml-md-3">
+                    <a href="components.html" class="btn btn-primary">Components</a>
+                </li>
+            </ul>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
                 </div>
-            </div>
-          </div>
-        </div>
-    </div>
-    <div class="header">
-        <!-- Navbar -->
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light px-5 py-0 custom-bot-shadow-2">
-            <div class="container-fluid">
-              <a class="navbar-brand antara-font" href="#home">Portfolio</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li class="nav-item mx-3">
-                    <a class="nav-link" href="#about">About</a>
-                  </li>
-                  <li class="nav-item mx-3">
-                    <a class="nav-link" href="#work">Works</a>
-                  </li>
-                  <li class="nav-item mx-3">
-                    <a class="nav-link" href="#contact" id="contact-link">Contact</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-          <!-- End of Navbar -->
-    </div>
-    <div class="main flex-xxl-grow-1 container-fluid mx-0 px-0 mt-6">
-        <!-- Landing -->
-        <div class="row fixed-height me-0">
-            <div class="col-10 mx-0 custom-bg-light d-flex container-fluid">
-                <div class="my-auto ms-6">
-                    <h2 class="custom-color-light-grey fs-3">Hi, I'm</h2>
-                    <h1 class="custom-color-dark-grey fs-xl">Awang Suria Trisakti</h1>
-                    <h3 class="custom-color-light-grey fs-5">and I am a <span class="custom-color-light-red">Backend</span> Engineer.</h3>
-                    <h3 class="custom-color-light-grey fw-bold fs-5">Find Me</h3>
-                    <div class="find-me fs-3">
-                        <a target="blank" href="https://www.instagram.com/awang.t/" class="custom-color-light-grey"><i class="fab fa-instagram"></i></a>
-                        <a target="blank" href="https://www.linkedin.com/in/awang-suria-trisakti-793336156/" class="custom-color-light-grey"><i class="fab fa-linkedin"></i></a>
-                        <a target="blank" href="https://github.com/awgst" class="custom-color-light-grey"><i class="fab fa-github-square"></i></a>
-                        <a target="blank" href="https://awangt.medium.com/" class="custom-color-light-grey"><i class="fab fa-medium"></i></a>
-                        <a target="blank" href="https://www.showwcase.com/awangt" class="custom-color-light-grey"><i class="fas fa-backpack"></i></a>
-                    </div>
-                </div>
-                <div class="photo-first ms-auto">
-                    <img class="first-images" src="images/first_v2.png" alt="">
-                </div>
-            </div>
-            <div class="col-2 mx-0 custom-bg-blue">
-                
-            </div>
-        </div>
-        <!-- End of Landing -->
-        <!-- About -->
-        <div class="container-fluid h-auto contentnya" id="about">
-            <div class="d-flex flex-column">
-                <div class="card mx-3 rounded-pill border-0 custom-top-shadow custom-h-20" style="margin-top: -10px;"></div>
-                <div class="d-flex mx-3 justify-content-center align-items-center about">
-                    <div class="photo">
-                        <img src="images/second.png" alt="" class="img-fluid">
-                    </div>
-                    <div class="d-flex flex-column about-me" style="width: clamp(280px, 450px, 450px);">
-                        <h2 class="heading-section">About Me</h2>
-                        <span class="line"></span>
-                        <p>I am a Software Engineer which specialized and enthusiast in Backend development. Currently work with a team for building a gold marketplace as a part of Backend team. </p>
-                        <p>Enthusiast and reliable person, hardworking to deliver the best result as well as possible.</p>
-                        <div class="container-fluid d-flex">
-                          <a target="blank" href="https://resume.showwcase.com/awangt.pdf" class="btn btn-custom rounded-15 p-3 fw-bold me-auto">Resume</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card mx-3 rounded-pill border-0 custom-bot-shadow-1 custom-h-20"  style="margin-bottom: -10px; z-index: 1; position: relative;"></div>
-            </div>
-        </div>
-        <!-- End of About -->
-        <!-- Latest Works -->
-        <div class="container-fluid custom-bg-light contentnya" id="work">
-            <div class="d-flex flex-column p-11">
-                <h1  class="heading-section">Latest Works</h1>
-                <span class="line"></span>
-                <div class="row row-cols-3">
-                    <div class="col pict btn btn-pict mb-3 p-0">
-                      <div id="carouselExampleDark-1" class="carousel carousel-fade carousel-dark slide h-100 w-100" data-bs-interval="false">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleDark-1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark-1" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark-1" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner w-100 h-100">
-                          <div class="carousel-item active h-100">
-                            <img src="images/project/myday/slider-1.png" class="d-block w-100 h-100 border-radius-10" alt="..." href="#imgToggle" data-bs-toggle="modal">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Web app for todo list.</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/project/myday/slider-2.png" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Built using Laravel framework.</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/project/myday/slider-3.png" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Visit <a href="https://mydayy.herokuapp.com/" target="_blank" rel="noopener noreferrer" class="text-light">mydayy.herokuapp.com</a> for more information.</p>
-                            </div>
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark-1" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark-1" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                    </div> 
-                    <div class="col pict btn btn-pict mb-3 p-0">
-                      <div id="carouselExampleDark-2" class="carousel carousel-fade carousel-dark slide h-100 w-100" data-bs-interval="false">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleDark-2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark-2" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark-2" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark-2" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark-2" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                        </div>
-                        <div class="carousel-inner w-100 h-100">
-                          <div class="carousel-item active h-100">
-                            <img src="images/project/momen/momen-1.PNG" class="d-block w-100 h-100 border-radius-10" alt="..." href="#imgToggle" data-bs-toggle="modal">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Web app for blogging.</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/project/momen/momen-2.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Built using Laravel framework.</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/project/momen/momen-3.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">This is my open source project</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/project/momen/momen-4.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Check it out on github.com/awgst/momen</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/project/momen/momen-5.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Let's collab</p>
-                            </div>
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark-2" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark-2" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                    </div> 
-                    <div class="col pict btn btn-pict mb-3 p-0">
-                      <div id="carouselExampleDark-3" class="carousel carousel-fade carousel-dark slide h-100 w-100" data-bs-interval="false">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleDark-3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark-3" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark-3" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner w-100 h-100">
-                          <div class="carousel-item active h-100">
-                            <img src="images/project/unclickbaited/unclickbaited-1.png" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Web app for clickbait Indonesian clickbait detector using machine learning.</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/project/unclickbaited/unclickbaited-2.png" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Built using Python and Django framework.</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/project/unclickbaited/unclickbaited-3.png" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Machine learning using SVM-PSO built with Python.</p>
-                            </div>
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark-3" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark-3" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                    </div> 
-                    <div class="col pict btn btn-pict mb-3 p-0">
-                      <div id="carouselExampleDark-4" class="carousel carousel-fade carousel-dark slide h-100 w-100" data-bs-interval="false">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleDark-4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark-4" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark-4" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark-4" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark-4" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                        </div>
-                        <div class="carousel-inner w-100 h-100">
-                          <div class="carousel-item active h-100">
-                            <img src="images/project/ppdb/ppdb-2.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">A website for admission selection for new junior high school students of SMP N 1 Gabus.</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/project/ppdb/ppdb-3.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">This is remake of my original project built using PHP Laravel.</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/project/ppdb/ppdb-4.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Built with pdf reporting using FPDF from github.com/crabbly/fpdf-laravel.</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/project/ppdb/ppdb-5.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);"></p>
-                            </div>
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/project/ppdb/ppdb-7.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Implement multi-level users using middleware for admin and super-admin.</p>
-                            </div>
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark-4" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark-4" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                    </div> 
-                    <div class="col pict btn btn-pict mb-3 p-0">
-                      <div id="carouselExampleDark-5" class="carousel carousel-fade carousel-dark slide h-100 w-100" data-bs-interval="false">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleDark-5" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark-5" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark-5" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark-5" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark-5" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                        </div>
-                        <div class="carousel-inner w-100 h-100">
-                          <div class="carousel-item active h-100">
-                            <img src="images/project/museum/sandi-1.png" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Local landing pages for records visitors data, built using php native.</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/project/museum/sandi-2.png" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Developed for student internship projects at museum sandi 2019.</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/project/museum/sandi-3.png" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Implement CRUD with MySQL.</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/project/museum/sandi-4.png" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Show statistic from accumulative visitors.</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/project/museum/sandi-5.png" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Can be managed by admin of museum.</p>
-                            </div>
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark-5" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark-5" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                    </div> 
-                    <div class="col pict btn btn-pict mb-3 p-0">
-                      <div id="carouselExampleDark-6" class="carousel carousel-fade carousel-dark slide h-100 w-100" data-bs-interval="false">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleDark-6" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark-6" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark-6" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark-6" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                          <button type="button" data-bs-target="#carouselExampleDark-6" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                        </div>
-                        <div class="carousel-inner w-100 h-100">
-                          <div class="carousel-item active h-100">
-                            <img src="images/project/Chat/chat-1.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">A web chat app for crypto final assignment built using native php.</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/project/Chat/chat-2.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Using md5 encryption for register and user sign in.</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/project/Chat/chatt-3.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Implementing ajax</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/project/Chat/chat-4.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Using md5 for encrypt users password</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item h-100">
-                            <img src="images/project/Chat/chat-5.PNG" class="d-block w-100 h-100 border-radius-10" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <p class="m-0 d-inline text-light" style="padding-bottom: 3px;background-color: rgba(0, 0, 0, 0.5);">Using rc4 for encrypt users messages</p>
-                            </div>
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark-6" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark-6" data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                    </div> 
-                </div>
-            </div>
-        </div>
-        <!-- End of Latest Works -->
-        <!-- Job History -->
-        <div class="container-fluid">
-          <div class="d-flex flex-column p-11">
-            <h1  class="heading-section">Job History</h1>
-            <span class="line"></span>
-            <div class="row row-cols-2">
-              <div class="col jobs">
-                <div class="no-style btn btn-job text-start rounded-15 p-3">
-                  <h2>Software Engineer | PT Gongsin Internasional Transindo</h2>
-                  <h3 class="custom-color-light-grey fs-5">Fulltime | Aug 2022 - Present</h3>
-                  <p class="custom-color-light-grey-2">Take a part of planning, coordinate, bug fixing, create and maintenance Korean golds marketplace as a backend engineer.</p>
-                </div>
-              </div>
-              <div class="col jobs">
-                <div class="no-style btn btn-job text-start rounded-15 p-3">
-                  <h2>Software Engineer | Mamikos</h2>
-                  <h3 class="custom-color-light-grey fs-5">Parttime | Jun 2022 - Jul 2022</h3>
-                  <p class="custom-color-light-grey-2">Take a part of planning and rewrite mamiservice feature as a backend engineer.</p>
-                </div>
-              </div>
-            </div>
-            <div class="row row-cols-2">
-              <div class="col jobs">
-                <div href="" class="no-style btn btn-job text-start rounded-15 p-3">
-                  <h2>Backend Developer | PT. Transisi Teknologi Mandiri</h2>
-                  <h3 class="custom-color-light-grey fs-5">Fulltime | Sept 2021 - Jul 2022</h3>
-                  <p class="custom-color-light-grey-2">Responsible as Backend Developer for maintenance, bug fixing and add new features of Adago.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End of Job History -->
-        <!-- Contact -->
-        <div class="d-flex flex-column container-fluid custom-bg-light-red px-0 mx-0 text-light contentnya" id="contact">
-            <div class="m-auto text-center py-5 my-5">
-                <h1>Contact Me</h1>
-                <span></span>
-                <p>If you have any question or if do you need more information please contact me at</p>
-                <div class="d-flex justify-content-center my-contact">
-                    <h3 class="fs-6 me-3">+62 8253 2523 6332</h3>
-                    <h3 class="fs-6 ms-3">trisaktiawang@gmail.com</h3>
-                </div>
-                <a href="mailto:trisaktiawang@gmail.com" class="btn btn-custom2 rounded-pill px-5 py-3 mt-3 fw-bold">Hire Me</a>
-            </div>
-        </div>
-		  <!-- End of Contact -->
-    </div>
-    <div class="footer mx-auto">
-        <span class="text-muted">Copyright &copy; <span id="date"></span></span>
-    </div>
+            </a>
+        </div>          
+    </nav><!-- End of Page Navbar -->
 
-    <!-- JavaScript Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <!-- Custom Script -->
-    <script src="js/script.js?v=2"></script>
-  </body>
+    <!-- page header -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up">HI!</span>
+                <span class="down">I am Awang Suria Trisakti</span>
+            </h1>
+            <p class="header-subtitle">Backend Engineer</p>            
+
+            <h2 class="section-title" style="color: #474950;font-weight: bold; opacity: 0.8; margin-bottom: 0;">Find Me</h2>
+            <div class="social-links text-left m-auto ml-sm-auto" style="color: #474950;font-weight: bold; opacity: 0.8;">
+                <a href="https://id.linkedin.com/in/awang-trisakti" class="link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/trisaktiawang" class="link" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/awgst" class="link" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://awangt.medium.com/" class="link" target="_blank"><i class="fab fa-medium"></i></a>
+            </div>
+        </div>              
+    </header><!-- end of page header -->
+
+    <!-- about section -->
+    <section class="section pt-0" id="about">
+        <!-- container -->
+        <div class="container text-center">
+            <!-- about wrapper -->
+            <div class="about">
+                <div class="about-img-holder">
+                    <img src="assets/imgs/me.png" class="about-img" alt="me.png">
+                </div>
+                <div class="about-caption">
+                    <h2 class="section-title mb-3">About Me</h2>
+                    <p style="text-align: justify;">
+                        Experienced Software Engineer with 2+ years of expertise in backend development. Specialized in using Go, PHP, and JavaScript/Typescript to build robust backend systems. Proficient in both SQL and NoSQL databases.
+                        <br>Eager to learn and explore about new technologies and software engineering concept.
+                    </p>
+                    <a href="https://www.showwcase.com/awangt" class="btn-rounded btn btn-outline-primary mt-4">Resume</a>
+                </div>              
+            </div><!-- end of about wrapper -->
+        </div><!-- end of container -->
+    </section> <!-- end of about section -->
+
+    <!-- portfolio section -->
+    <section class="section" id="portfolio">
+        <div class="container text-center">
+            <h6 class="section-title mb-6">Project</h6>
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-4" style="min-height: 209.99px;min-width: 350px;margin-bottom: 0.25rem;">
+                    <a href="https://aiterm.net" class="portfolio-card" style="height: 100%;">
+                        <img src="assets/imgs/aiterm.png" class="portfolio-card-img" alt="https://aiterm.net" style="height: 100%;">    
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>AiTerm</h5>
+                                <p class="font-weight-normal">AI terminal assistant, convert natural language into executable command</p>
+                            </span>                         
+                        </span>                     
+                    </a>
+                </div>
+                <div class="col-md-4" style="min-height: 209.99px;min-width: 350px;margin-bottom: 0.25rem;">
+                    <a href="https://aiconverter.hadeai.com" class="portfolio-card" style="height: 100%;">
+                        <img src="assets/imgs/hade.png" class="portfolio-card-img" alt="https://aiconverter.hadeai.com" style="height: 100%;">    
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>HADE AI</h5>
+                                <p class="font-weight-normal">HADE AI converts knowledge into engaging, interactive content for various purposes like training, document generation, sales assistance, and coaching.</p>
+                            </span>                         
+                        </span>                     
+                    </a>
+                </div>
+                <div class="col-md-4" style="min-height: 209.99px;min-width: 350px;margin-bottom: 0.25rem;">
+                    <a href="https://satusehat.kemkes.go.id/data" class="portfolio-card" style="height: 100%;">
+                        <img src="assets/imgs/satusehat.png" class="portfolio-card-img" alt="https://satusehat.kemkes.go.id/data" style="height: 100%;">    
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Satu Sehat</h5>
+                                <p class="font-weight-normal">Portal to support monitoring, policy formulation and decision making that are measurable and right on target.</p>
+                            </span>                         
+                        </span>                     
+                    </a>
+                </div>
+                <div class="col-md-4" style="min-height: 209.99px;min-width: 350px;margin-bottom: 0.25rem;">
+                    <a href="https://www.upstore.kr/" class="portfolio-card" style="height: 100%;">
+                        <img src="assets/imgs/upstore.jpeg" class="portfolio-card-img" alt="https://www.upstore.kr/" style="height: 100%;">    
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Goldpay</h5>
+                                <p class="font-weight-normal">Gold based e-wallet with features of gold purchasing, withdrawal and transfer.</p>
+                            </span>                         
+                        </span>                     
+                    </a>
+                </div>
+                <div class="col-md-4" style="min-height: 209.99px;min-width: 350px;margin-bottom: 0.25rem;">
+                    <a href="https://www.upstore.kr/" class="portfolio-card" style="height: 100%;">
+                        <img src="assets/imgs/tongsang.png" class="portfolio-card-img" alt="https://www.upstore.kr/" style="height: 100%;">    
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Tongsang</h5>
+                                <p class="font-weight-normal">Internal gold shipment status tracking based on kiosk for sending and also delivering golds</p>
+                            </span>                         
+                        </span>                     
+                    </a>
+                </div>
+                <div class="col-md-4" style="min-height: 209.99px;min-width: 350px;margin-bottom: 0.25rem;">
+                    <a href="https://adago.id/" class="portfolio-card" style="height: 100%;">
+                        <img src="assets/imgs/adago.png" class="portfolio-card-img" alt="https://adago.id/" style="height: 100%;">    
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Adago</h5>
+                                <p class="font-weight-normal">Business performance management web app of PT. Adaro Energy Tbk.</p>
+                            </span>                         
+                        </span>                     
+                    </a>
+                </div>
+                <div class="col-md-4" style="min-height: 209.99px;min-width: 350px;margin-bottom: 0.25rem;">
+                    <a href="https://github.com/awgst/myday" class="portfolio-card" style="height: 100%;">
+                        <img src="assets/imgs/todoapp.png" class="portfolio-card-img" alt="TODO App" style="height: 100%;">    
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>TODO App</h5>
+                                <p class="font-weight-normal">Todo list web app</p>
+                            </span>                         
+                        </span>                     
+                    </a>
+                </div>
+                <div class="col-md-4" style="min-height: 209.99px;min-width: 350px;margin-bottom: 0.25rem;">
+                    <a href="https://github.com/awgst/momen" class="portfolio-card" style="height: 100%;">
+                        <img src="assets/imgs/momen.png" class="portfolio-card-img" alt="Blogging App" style="height: 100%;">    
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Blogging App</h5>
+                                <p class="font-weight-normal">Blogging web app</p>
+                            </span>                         
+                        </span>                     
+                    </a>
+                </div>
+                <div class="col-md-4" style="min-height: 209.99px;min-width: 350px;margin-bottom: 0.25rem;">
+                    <a href="https://github.com/awgst/Indonesian-Clickbait-Detection-Using-SVM-PSO" class="portfolio-card" style="height: 100%;">
+                        <img src="assets/imgs/unclickbaited-1.png" class="portfolio-card-img" alt="https://satusehat.kemkes.go.id/data" style="height: 100%;">    
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Indonesian Clickbait Detection</h5>
+                                <p class="font-weight-normal">Indonesian clickbait headline detection web app. Implementation of machine learning</p>
+                            </span>                         
+                        </span>                     
+                    </a>
+                </div>
+            </div><!-- end of row -->
+        </div><!-- end of container -->
+    </section> <!-- end of portfolio section -->
+
+    <!-- section -->
+    <!-- end of section -->
+    
+    <!-- blog section -->
+    <section class="section" id="jobs">
+        <!-- container -->
+        <div class="container text-center">
+            <h6 class="section-title mb-6">Job History</h6>
+            <!-- blog-wrapper -->
+            <div class="blog-card">
+                <div class="blog-card-body">
+                    <h5 class="blog-card-title">Software Engineer</h6>
+
+                    <p class="blog-card-caption">
+                        <a href="https://www.linkedin.com/company/pt-g-i-t/" target="_blank">PT Gongsin Internasional Transindo</a>
+                    </p>
+                    <ul>
+                        <li>Working on Korean golds marketplace (Upstore) using Go (Programming language), Node.js, MySQL, MongoDB, Docker and Laravel</li>
+                        <li>Coordinate and collaborate between development and product team to achieve the product goals</li>
+                        <li>Design and implement features based on product requirements</li>
+                        <li>Write clean, readable and reusable code with implementation of various design pattern and software design principles</li>
+                        <li>Create any required technical documentation on confluence page</li>
+                        <li>Review and refine user stories into smaller tasks</li>
+                        <li>Develop internal golds shipment tracking with features of send and deliver golds</li>
+                        <li>Develop golds based e-wallet with features of gold purchasing, withdrawal and transfer</li>
+                    </ul>
+                </div>
+            </div><!-- end of blog wrapper -->
+
+            <div class="blog-card">
+                <div class="blog-card-body">
+                    <h5 class="blog-card-title">Backend Developer</h6>
+
+                    <p class="blog-card-caption">
+                        <a href="https://www.linkedin.com/company/kedata-indonesia/" target="_blank">PT Kedata Indonesia Digital</a>
+                    </p>
+                    <b>Working on https://hadeai.com/</b>
+                    <ul>
+                        <li>Working across with prompt engineer to create an AI bot generator and AI chatbot</li>
+                        <li>Create authentication, authorization and email verification features</li>
+                        <li>Create AI Bot generation based on OpenAI LLM</li>
+                        <li>Integrate the generated bot to be used for chat with the real user</li>
+                        <li>Statistic features</li>
+                    </ul>
+                    <b>Working on https://satusehat.kemkes.go.id/data as a Backend Developer</b>
+                    <ul>
+                        <li>Working with Node.js, Nest.Js, Typescript and PostgreSQL</li>
+                        <li>Dataset creation and visualization features</li>
+                        <li>Metabase dashboard integration features</li>
+                        <li>Jest unit testing</li>
+                    </ul>
+                </div>
+            </div><!-- end of blog wrapper -->
+
+            <div class="blog-card">
+                <div class="blog-card-body">
+                    <h5 class="blog-card-title">Backend Developer</h6>
+
+                    <p class="blog-card-caption">
+                        <a href="https://www.linkedin.com/company/pt-transisi-teknologi-mandiri/" target="_blank">PT Transisi Teknologi Mandiri</a>
+                    </p>
+                    <ul>
+                        <li>Working on Adago (a business performance management web-based application of PT. Adaro Energy Tbk) using PHP-Laravel and MySQL</li>
+                        <li>Maintenance and bug fix the existing features on Adago</li>
+                        <li>Develop new features for heavy equipment data collection and management</li>
+                        <li>Implementing the email webhook for the proposal agreement</li>
+                    </ul>
+                </div>
+            </div><!-- end of blog wrapper -->
+
+        </div><!-- end of container -->
+    </section><!-- end of blog section -->
+
+        <!-- service section -->
+        <!-- <section class="section" id="tech">
+            <div class="container text-center">
+                <h6 class="section-title mb-6">Tech</h6>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="service-card">
+                            <div class="body">
+                                <img src="assets/imgs/pencil-case.svg" alt="Go" class="icon">
+                                <h6 class="title">Go</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="service-card">
+                            <div class="body">
+                                <img src="assets/imgs/responsive.svg" alt="Javascript" class="icon">
+                                <h6 class="title">Javascript</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="service-card">
+                            <div class="body">
+                                <img src="assets/imgs/toolbox.svg" alt="PHP" class="icon">
+                                <h6 class="title">PHP</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="service-card">
+                            <div class="body">
+                                <img src="assets/imgs/analytics.svg" alt="Node.js" class="icon">
+                                <h6 class="title">Node.Js</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- end of service section -->
+
+    <!-- contact section -->
+    <section class="section-sm bg-primary">
+        <!-- container -->
+        <div class="container text-center text-sm-left">
+            <!-- row -->
+            <div class="row align-items-center">
+                <div class="col-sm offset-md-1 mb-4 mb-md-0">
+                    <h6 class="title text-light">Want to work with me?</h6>
+                    <p class="m-0 text-light">Always feel Free to Contact & Hire me</p>
+                </div>
+                <div class="col-sm offset-sm-2 offset-md-3">
+                    <a href="mailto:trisaktiawang@gmail.com" class="btn btn-lg my-font btn-light rounded">Hire Me</a>
+                </div>
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </section>
+    <!-- end of contact section -->
+
+    <!-- footer -->
+    <div class="container">
+        <footer class="footer">       
+            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script></p>
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <a href="https://id.linkedin.com/in/awang-trisakti" class="link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/trisaktiawang" class="link" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/awgst" class="link" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://awangt.medium.com/" class="link" target="_blank"><i class="fab fa-medium"></i></a>
+            </div>
+        </footer>
+    </div> <!-- end of page footer -->
+	
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Meyawo js -->
+    <script src="assets/js/meyawo.js"></script>
+
+</body>
 </html>
